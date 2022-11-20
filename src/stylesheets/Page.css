@@ -1,0 +1,54 @@
+.test-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cliente{
+  margin-top: 8rem;
+  font-size: 4rem;
+}
+.test {
+  margin-top: 0;
+  font-size: 3rem;
+}
+.testeador {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+.transcripcion-titulo {
+  font-size: 2.6rem;
+}
+.transcripcion {
+  width: 500px;
+  height: 500px;
+  overflow-y: scroll;
+  padding: 0px 30px
+}
+.tareas-titulo {
+  margin-top: 6rem;
+  font-size: 2.4rem;
+}
+.escenario{
+  width: 500px;
+}
+
+.contenedor-tareas {
+  width: 500px;
+  border-width: 1px 0px;
+  border-color: #FFF;
+  border-style: solid;
+  padding: 1rem 0;
+}
+.tarea {
+  color: #dee2e6;
+  margin-bottom: 1rem;
+}
+.tarea-texto {
+  margin-top: 0;
+}
+.duracion {
+  color: #778da9;
+}
+.duracion-tiempo {
+  color: #98c1d9;
+}
