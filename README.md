@@ -1,3 +1,2 @@
-# greydive-challenge
-Challenge de greydive
-Librerias usadas: React, React Router, React-Player.
+# Challenge de greydive
+Librerias/Herramientas usadas: React, React Router, React-Player.
