@@ -5,8 +5,8 @@ import ReactPlayer from 'react-player'
 
 const Page = ({data}) => {
   const re = /^[0-9\b]+$/;
-  const htmlText = data.transcripcion
-
+  const transcripcion = data.transcripcion;
+  
   return (
     <div className='test-contenedor'>
       <h1 className='cliente'>{data.cliente}</h1>
@@ -19,14 +19,15 @@ const Page = ({data}) => {
         height='100%' 
       />
       <h3 className='transcripcion-titulo'>Transcripcion</h3>
-      <div className='transcripcion' dangerouslySetInnerHTML={{ __html: htmlText }} />
+      <div className='transcripcion' dangerouslySetInnerHTML={{ __html: transcripcion }} />
       <h3 className='tareas-titulo'>Tareas</h3>
       <p className='escenario'>Escenario: {data.escenario}</p>
 
       {data.preguntas.map((pregunta, index) => (
-      <div className='contenedor-tareas' key={index}>
+        <div className='contenedor-tareas' key={index}>
         <p className='tarea'>Tarea {index + 1}</p>
-        <p className='tarea-texto'>{pregunta.texto}</p>
+        <div className='tarea-texto' dangerouslySetInnerHTML={{__html: `<p>${pregunta.texto}</p>`}}></div>
+        {/* <p className='tarea-texto'>{pregunta.texto}</p> */}
         {pregunta.respuesta.match(re) ? <p className='respuesta'>Respuesta: {pregunta.respuesta}</p> : null }
         <p className='duracion'>Duración de la tarea: <span className='duracion-tiempo'>{pregunta.tiempo}</span></p>
       </div>
